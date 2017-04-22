@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Galdin Quay</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/style.css">
+    
+</head>
+<body>
+	
+	<div class = "container">
+		<div class = "jumbotron">
+			<h1><img src="assets/images/Planet_express.png" style="width:200px; height:auto">Welcome to Galdin Quay</h1>
+		</div>
+		
+		<div class = "col-lg-12">
+			
+		</div>
+		
+        <div class="panel panel-primary">
+        	<div class="panel-heading">
+            	<h3 class="panel-title"><strong>Current Reservations</strong></h3>
+            </div>
+            <div class="panel-body" id="tableSection">
+            <div class="reservations"></div>
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+        	<div class="panel-heading">
+            	<h3 class="panel-title"><strong>Wait List</strong></h3>
+            </div>
+            <div class="panel-body" id="waitlistSection">
+            <div class="waitlist"></div>
+            </div>
+        </div>
+	
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    
+    <script src="assets/script.js"></script>
+</body>
+</html>
