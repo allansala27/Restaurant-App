@@ -11,10 +11,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-var guestList = [];
-
-//holds list of cutomers
-
 //new guest constructor
 function Guest (name, phone, email, id) {
 	this.name = name;
@@ -22,6 +18,24 @@ function Guest (name, phone, email, id) {
 	this.email = email;
 	this. id = id;
 }
+
+// Lists of guests
+var guestList = [
+	{
+		name: "Allan",
+		phone: "9099656273",
+		email: "allansala27@gmail.com",
+		id: "IWANTMYTABLE"
+	}
+];
+var waitlist = [
+	{
+		name: "Wyatt",
+		phone: "1920912120",
+		email: "wyatt@google.com",
+		id: "HUNGRY AF"
+	}
+];
 
 var makeReservation = function() {};
 //get values from user
@@ -35,8 +49,7 @@ app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
 
-//ROUTES =======================================
-
+// GET ROUTES =======================================
 app.get("/", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });
@@ -47,4 +60,6 @@ app.get("/reserve", function(req ,res) {
 
 app.get("/tables", function(req ,res) {
 	res.sendFile(path.join(__dirname, "tables.html"));
+
+	return res.json(guestList[0]);
 })
